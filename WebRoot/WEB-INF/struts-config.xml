@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="registerForm" type="cn.itcast.web.formbean.RegisterForm"/> 
+		<form-bean name="userForm" type="cn.itcast.web.formbean.UserForm"/> 
+		<form-bean name="resultForm" type="cn.itcast.web.formbean.ResultForm"/> 
+		<form-bean name="chartForm" type="cn.itcast.web.formbean.ChartForm"/> 
+		<form-bean name="noContentForm" type="cn.itcast.web.formbean.NoContentForm"/> 
+		<form-bean name="otherForm" type="cn.itcast.web.formbean.OtherForm"/> 
+		<form-bean name="appealForm" type="cn.itcast.web.formbean.AppealForm"/> 
+		<form-bean name="criticizeForm" type="cn.itcast.web.formbean.CriticizeForm"/> 
+	</form-beans>
+	<global-forwards>
+		<forward name="message" path="/WEB-INF/page/share/message.jsp" />
+		<forward name="directUrl" path="/WEB-INF/page/share/directUrl.jsp"/>
+	</global-forwards>
+	<action-mappings>
+		<!-- 系统初始化 -->
+		<action path="/system/init"/>
+		<!-- 控制台主页 -->
+		<action path="/control/center/index" forward="/WEB-INF/page/controlcenter/index.jsp"/>
+		<action path="/control/center/head" forward="/WEB-INF/page/controlcenter/head.jsp"/>
+		<action path="/control/center/menu" forward="/WEB-INF/page/controlcenter/menu.jsp"/>
+		<action path="/control/center/main" forward="/WEB-INF/page/controlcenter/main.jsp"/>
+		<action path="/login" forward="/WEB-INF/page/controlcenter/login.jsp"/>
+		<action path="/control/result" forward="/WEB-INF/page/result/result.jsp"/>
+		<action path="/control/accept" forward="/WEB-INF/page/share/accept.jsp"/>
+		<action path="/control/inbusiness" forward="/WEB-INF/page/share/inbusiness.jsp"/>
+				
+		<!-- 登记分页显示 -->
+		 <action path="/control/register/list" name="registerForm" scope="request">
+			<forward name="list" path="/WEB-INF/page/register/registerlist.jsp"/>
+		</action>
+		<!-- 登记管理 -->
+	  <action path="/control/register/manage" name="registerForm" scope="request" parameter="method">
+			<forward name="add" path="/WEB-INF/page/register/addregister.jsp"/>
+			<forward name="edit" path="/WEB-INF/page/register/editregister.jsp"/>
+			<forward name="query" path="/WEB-INF/page/register/queryregister.jsp"/>
+			<forward name="list" path="/WEB-INF/page/register/registerlist.jsp"/>
+			<forward name="print" path="/WEB-INF/page/register/print.jsp"/>
+			<forward name="queryhandlerway" path="/WEB-INF/page/register/queryhandlerway.jsp"/>
+			<forward name="listhandlerway" path="/WEB-INF/page/register/listhandlerway.jsp"/>
+		</action> 
+		 <action path="/control/other/list" name="otherForm" scope="request">
+			<forward name="list" path="/WEB-INF/page/other/otherlist.jsp"/>
+		</action>
+	  <action path="/control/other/manage" name="otherForm" scope="request" parameter="method">
+			<forward name="add" path="/WEB-INF/page/other/addother.jsp"/>
+			<forward name="edit" path="/WEB-INF/page/other/editother.jsp"/>
+			<forward name="query" path="/WEB-INF/page/other/queryother.jsp"/>
+		</action> 
+	 <!--  <action path="/control/print/manage" scope="request" parameter="method">
+			<forward name="list" path="/WEB-INF/page/print/addother.jsp"/>
+			<forward name="print1" path="/WEB-INF/page/print/editother.jsp"/>
+			<forward name="print2" path="/WEB-INF/page/print/queryother.jsp"/>
+		</action>  -->
+		
+		 <action path="/control/nocontent/list" name="noContentForm" scope="request">
+			<forward name="list" path="/WEB-INF/page/nocontent/nocontentlist.jsp"/>
+		</action>
+	  <action path="/control/nocontent/manage" name="noContentForm" scope="request" parameter="method">
+			<forward name="add" path="/WEB-INF/page/nocontent/addnocontent.jsp"/>
+			<forward name="edit" path="/WEB-INF/page/nocontent/editnocontent.jsp"/>
+			<forward name="query" path="/WEB-INF/page/nocontent/querynocontent.jsp"/>
+		</action> 
+		 <action path="/control/appeal/list" name="appealForm" scope="request">
+				<forward name="list" path="/WEB-INF/page/appeal/appeal_list.jsp"/> 
+		</action>
+	  <action path="/control/appeal/manage" name="appealForm" scope="request" parameter="method">
+			<forward name="add" path="/WEB-INF/page/appeal/addappeal.jsp"/>
+			<forward name="edit" path="/WEB-INF/page/appeal/editappeal.jsp"/>
+			<forward name="query" path="/WEB-INF/page/appeal/queryappeal.jsp"/>
+		</action> 
+		 <action path="/control/criticize/list" name="criticizeForm" scope="request">
+				<forward name="list" path="/WEB-INF/page/criticize/criticize_list.jsp"/> 
+		</action>
+	  <action path="/control/criticize/manage" name="criticizeForm" scope="request" parameter="method">
+			<forward name="add" path="/WEB-INF/page/criticize/addcriticize.jsp"/>
+			<forward name="edit" path="/WEB-INF/page/criticize/editcriticize.jsp"/>
+			<forward name="query" path="/WEB-INF/page/criticize/querycriticize.jsp"/>
+		</action> 
+		
+		<!-- 登录 -->
+		 <action path="/user/login" name="userForm" scope="request">
+			<forward name="success" path="/control/center/index.do" redirect="true"/>
+			<forward name="login" path="/WEB-INF/page/controlcenter/login.jsp"/>
+		</action>
+		<!-- 注销 -->
+		 <action path="/user/logout"  scope="request">
+			<forward name="login" path="/WEB-INF/page/controlcenter/login.jsp"/>
+		</action>
+		<!-- 用户分页显示 -->
+		 <action path="/control/user/list" name="userForm" scope="request">
+			<forward name="list" path="/WEB-INF/page/user/userlist.jsp"/>
+		</action>
+		<!-- 用户管理 -->
+	 <action path="/control/user/manage" name="userForm" scope="request" parameter="method">
+			<forward name="add" path="/WEB-INF/page/user/adduser.jsp"/>
+			<forward name="edit" path="/WEB-INF/page/user/edituser.jsp"/>
+			<forward name="query" path="/WEB-INF/page/user/queryuser.jsp"/>
+			<forward name="update" path="/WEB-INF/page/user/updateuser.jsp"/>
+			<forward name="success" path="/WEB-INF/page/share/updateusersuccess.jsp"/>
+			<forward name="download1" path="/WEB-INF/page/chart/1.doc"/>
+			<forward name="download2" path="/WEB-INF/page/chart/2.doc"/>
+			<forward name="download3" path="/WEB-INF/page/chart/3.doc"/>
+			<forward name="download4" path="/WEB-INF/page/chart/4.doc"/>
+			<forward name="download5" path="/WEB-INF/page/chart/5.doc"/>
+			<forward name="download6" path="/WEB-INF/page/chart/6.doc"/>
+			<forward name="download7" path="/WEB-INF/page/chart/7.doc"/>
+		</action> 
+		<!-- 立案分页显示 -->
+		 <action path="/control/result/list" name="resultForm" scope="request">
+			<forward name="list" path="/WEB-INF/page/result/resultlist.jsp"/>
+		</action>
+		<!-- 立案管理 -->
+	 <action path="/control/result/manage" name="resultForm" scope="request" parameter="method">
+			<forward name="add" path="/WEB-INF/page/result/addresult.jsp"/>
+			<forward name="edit" path="/WEB-INF/page/result/editresult.jsp"/>
+			<forward name="query" path="/WEB-INF/page/result/queryresult.jsp"/>
+		</action> 
+		<!-- 报表管理 -->
+	 <action path="/control/chart/manage" name="chartForm" scope="request" parameter="method">
+			<forward name="query" path="/WEB-INF/page/chart/querychart.jsp"/>
+			<forward name="chart1" path="/WEB-INF/page/chart/chart1.jsp"/>
+			<forward name="chart2" path="/WEB-INF/page/chart/chart2.jsp"/>
+			<forward name="chart3" path="/WEB-INF/page/chart/chart3.jsp"/>
+		</action> 
+	</action-mappings>
+	<controller>
+	    <set-property property="processorClass" value="org.springframework.web.struts.DelegatingRequestProcessor"/>
+	</controller> 
+</struts-config>

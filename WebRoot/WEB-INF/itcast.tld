@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+    version="2.0">
+    
+    <description>A tag library exercising SimpleTag handlers.</description>
+    <tlib-version>1.0</tlib-version>
+    <short-name>SimpleTagLibrary</short-name>
+    <uri>/itcast</uri>
+    
+    <function>
+        <name>sourceAndType</name>
+		<function-class>cn.itcast.elfunction.ChartFunction</function-class>
+		<function-signature>java.lang.Integer sourceAndType(java.lang.Integer,java.lang.Integer,java.util.Date,java.util.Date)</function-signature>
+    </function>
+    <function>
+        <name>source</name>
+		<function-class>cn.itcast.elfunction.ChartFunction</function-class>
+		<function-signature>java.lang.Integer source(java.lang.Integer,java.util.Date,java.util.Date)</function-signature>
+    </function>
+    <function>
+        <name>type</name>
+		<function-class>cn.itcast.elfunction.ChartFunction</function-class>
+		<function-signature>java.lang.Integer type(java.lang.Integer,java.util.Date,java.util.Date)</function-signature>
+    </function>
+    <function>
+        <name>rank</name>
+		<function-class>cn.itcast.elfunction.ChartFunction</function-class>
+		<function-signature>java.lang.Integer rank(java.lang.Integer,java.util.Date,java.util.Date)</function-signature>
+    </function>
+    <function>
+        <name>rankAndType</name>
+		<function-class>cn.itcast.elfunction.ChartFunction</function-class>
+		<function-signature>java.lang.Integer rankAndType(java.lang.Integer,java.lang.Integer,java.util.Date,java.util.Date)</function-signature>
+    </function>
+    <function>
+        <name>allType</name>
+		<function-class>cn.itcast.elfunction.ChartFunction</function-class>
+		<function-signature>java.lang.Integer allType(java.util.Date,java.util.Date)</function-signature>
+    </function>
+    <function>
+        <name>allTypeHandlered</name>
+		<function-class>cn.itcast.elfunction.ChartFunction</function-class>
+		<function-signature>java.lang.Integer allTypeHandlered(java.util.Date,java.util.Date)</function-signature>
+    </function>
+    <function>
+        <name>sourceTwo</name>
+		<function-class>cn.itcast.elfunction.ChartFunction</function-class>
+		<function-signature>java.lang.Integer sourceTwo(java.lang.String,java.util.Date,java.util.Date)</function-signature>
+    </function>
+    <function>
+        <name>sourceTwoAndRank</name>
+		<function-class>cn.itcast.elfunction.ChartFunction</function-class>
+		<function-signature>java.lang.Integer sourceTwoAndRank(java.lang.String,java.lang.Integer,java.util.Date,java.util.Date)</function-signature>
+    </function>
+    
+    
+    
+    <function>
+        <name>allAppeal</name>
+		<function-class>cn.itcast.elfunction.ChartFunction</function-class>
+		<function-signature>java.lang.Integer allAppeal(java.util.Date,java.util.Date)</function-signature>
+    </function>
+     <function>
+        <name>sourceAndAppeal</name>
+		<function-class>cn.itcast.elfunction.ChartFunction</function-class>
+		<function-signature>java.lang.Integer sourceAndAppeal(java.lang.Integer,java.util.Date,java.util.Date)</function-signature>
+    </function>
+     <function>
+        <name>rankAndAppeal</name>
+		<function-class>cn.itcast.elfunction.ChartFunction</function-class>
+		<function-signature>java.lang.Integer rankAndAppeal(java.lang.Integer,java.util.Date,java.util.Date)</function-signature>
+    </function>
+    
+    
+    
+    <function>
+        <name>allCriticize</name>
+		<function-class>cn.itcast.elfunction.ChartFunction</function-class>
+		<function-signature>java.lang.Integer allCriticize(java.util.Date,java.util.Date)</function-signature>
+    </function>
+     <function>
+        <name>sourceAndCriticize</name>
+		<function-class>cn.itcast.elfunction.ChartFunction</function-class>
+		<function-signature>java.lang.Integer sourceAndCriticize(java.lang.Integer,java.util.Date,java.util.Date)</function-signature>
+    </function>
+     <function>
+        <name>rankAndCriticize</name>
+		<function-class>cn.itcast.elfunction.ChartFunction</function-class>
+		<function-signature>java.lang.Integer rankAndCriticize(java.lang.Integer,java.util.Date,java.util.Date)</function-signature>
+    </function>
+    
+    
+    
+    <function>
+        <name>allNoContent</name>
+		<function-class>cn.itcast.elfunction.ChartFunction</function-class>
+		<function-signature>java.lang.Integer allNoContent(java.util.Date,java.util.Date)</function-signature>
+    </function>
+    <function>
+        <name>sourceAndNoContent</name>
+		<function-class>cn.itcast.elfunction.ChartFunction</function-class>
+		<function-signature>java.lang.Integer sourceAndNoContent(java.lang.Integer,java.util.Date,java.util.Date)</function-signature>
+    </function>
+    <function>
+        <name>rankAndNoContent</name>
+		<function-class>cn.itcast.elfunction.ChartFunction</function-class>
+		<function-signature>java.lang.Integer rankAndNoContent(java.lang.Integer,java.util.Date,java.util.Date)</function-signature>
+    </function>
+    
+    
+    <function>
+        <name>allOther</name>
+		<function-class>cn.itcast.elfunction.ChartFunction</function-class>
+		<function-signature>java.lang.Integer allOther(java.util.Date,java.util.Date)</function-signature>
+    </function>
+    
+    <function>
+        <name>allOtherByEach</name>
+		<function-class>cn.itcast.elfunction.ChartFunction</function-class>
+		<function-signature>java.lang.Integer allOtherByEach(java.lang.String,java.util.Date,java.util.Date)</function-signature>
+    </function>
+    <function>
+        <name>sourceAndOther</name>
+		<function-class>cn.itcast.elfunction.ChartFunction</function-class>
+		<function-signature>java.lang.Integer sourceAndOther(java.lang.String,java.lang.Integer,java.util.Date,java.util.Date)</function-signature>
+    </function>
+    <function>
+        <name>rankAndOther</name>
+		<function-class>cn.itcast.elfunction.ChartFunction</function-class>
+		<function-signature>java.lang.Integer rankAndOther(java.lang.String,java.lang.Integer,java.util.Date,java.util.Date)</function-signature>
+    </function>
+    <function>
+        <name>sourceAndOther2</name>
+		<function-class>cn.itcast.elfunction.ChartFunction</function-class>
+		<function-signature>java.lang.Integer sourceAndOther(java.lang.Integer,java.util.Date,java.util.Date)</function-signature>
+    </function>
+    <function>
+        <name>rankAndOther2</name>
+		<function-class>cn.itcast.elfunction.ChartFunction</function-class>
+		<function-signature>java.lang.Integer rankAndOther(java.lang.Integer,java.util.Date,java.util.Date)</function-signature>
+    </function>
+    <function>
+        <name>rankAndSource</name>
+		<function-class>cn.itcast.elfunction.ChartFunction</function-class>
+		<function-signature>java.lang.Integer rankAndSource(java.lang.Integer,java.lang.Integer,java.util.Date,java.util.Date)</function-signature>
+    </function>
+    <function>
+        <name>rankAndHandlerWay</name>
+		<function-class>cn.itcast.elfunction.ChartFunction</function-class>
+		<function-signature>java.lang.Integer rankAndHandlerWay(java.lang.String,java.lang.Integer,java.util.Date,java.util.Date)</function-signature>
+    </function>
+    <function>
+        <name>handlerWay</name>
+		<function-class>cn.itcast.elfunction.ChartFunction</function-class>
+		<function-signature>java.lang.Integer handlerWay(java.lang.String,java.util.Date,java.util.Date)</function-signature>
+    </function>
+</taglib>
