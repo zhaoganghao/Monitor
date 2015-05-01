@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="Monitor"
+  id="myeclipse.1399620441298"
+  context-root="/Monitor"
+  j2ee-spec="5.0"
+  archive="Monitor.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
